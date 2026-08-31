@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Geist', system-ui, sans-serif;
+    --font-body: 'Geist', system-ui, sans-serif;
+    --font-heading-weight: 600;
+    --font-body-weight: 400;
+
+    /* === Theme-overridable tokens (19 tokens, oklch) === */
+    --color-background: oklch(98% 0 0);
+    --color-foreground: oklch(30% 0 0);
+    --color-card: oklch(94% 0 0);
+    --color-card-foreground: oklch(30% 0 0);
+    --color-popover: oklch(94% 0 0);
+    --color-popover-foreground: oklch(30% 0 0);
+    --color-primary: oklch(35% 0 0);
+    --color-primary-foreground: oklch(97% 0 0);
+    --color-secondary: oklch(92% 0 0);
+    --color-secondary-foreground: oklch(30% 0 0);
+    --color-muted: oklch(88% 0 0);
+    --color-muted-foreground: oklch(50% 0 0);
+    --color-accent: oklch(90% 0 0);
+    --color-accent-foreground: oklch(30% 0 0);
+    --color-destructive: oklch(62.8% 0.208 22.7);
+    --color-destructive-foreground: oklch(100% 0 0);
+    --color-border: oklch(85% 0 0);
+    --color-input: oklch(85% 0 0);
+    --color-ring: oklch(30% 0 0);
+
+    /* Template-specific tokens (not overridden by theme) */
+    --brand-primary: 219 100% 57%;
+    --action-blue: 219 100% 57%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar — derives from theme tokens */
+    --sidebar-background: var(--color-card);
+    --sidebar-foreground: var(--color-foreground);
+    --sidebar-primary: var(--color-primary);
+    --sidebar-primary-foreground: var(--color-primary-foreground);
+    --sidebar-accent: var(--color-accent);
+    --sidebar-accent-foreground: var(--color-accent-foreground);
+    --sidebar-border: var(--color-border);
+    --sidebar-ring: var(--color-ring);
+  }
+
+  .dark {
+    --color-background: oklch(98% 0 0);
+    --color-foreground: oklch(30% 0 0);
+    --color-card: oklch(94% 0 0);
+    --color-card-foreground: oklch(30% 0 0);
+    --color-popover: oklch(94% 0 0);
+    --color-popover-foreground: oklch(30% 0 0);
+    --color-primary: oklch(35% 0 0);
+    --color-primary-foreground: oklch(97% 0 0);
+    --color-secondary: oklch(92% 0 0);
+    --color-secondary-foreground: oklch(30% 0 0);
+    --color-muted: oklch(88% 0 0);
+    --color-muted-foreground: oklch(50% 0 0);
+    --color-accent: oklch(90% 0 0);
+    --color-accent-foreground: oklch(30% 0 0);
+    --color-destructive: oklch(62.8% 0.208 22.7);
+    --color-destructive-foreground: oklch(100% 0 0);
+    --color-border: oklch(85% 0 0);
+    --color-input: oklch(85% 0 0);
+    --color-ring: oklch(30% 0 0);
+
+    --brand-primary: 219 100% 57%;
+    --action-blue: 219 100% 57%;
+
+    --sidebar-background: var(--color-card);
+    --sidebar-foreground: var(--color-foreground);
+    --sidebar-primary: var(--color-primary);
+    --sidebar-primary-foreground: var(--color-primary-foreground);
+    --sidebar-accent: var(--color-accent);
+    --sidebar-accent-foreground: var(--color-accent-foreground);
+    --sidebar-border: var(--color-border);
+    --sidebar-ring: var(--color-ring);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body, 'Geist'), system-ui, sans-serif;
+    font-weight: var(--font-body-weight);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading, 'Geist'), system-ui, sans-serif;
+    font-weight: var(--font-heading-weight);
+  }
+
+  a, button, input, label {
+    font-family: var(--font-heading, 'Geist'), system-ui, sans-serif;
+  }
+}
